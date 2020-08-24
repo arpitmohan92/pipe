@@ -1,0 +1,9 @@
+FROM tomcat:latest
+
+COPY script.sh /usr/local/tomcat
+
+RUN ./script.sh
+
+COPY *.war /usr/local/tomcat/webapps
+
+
